@@ -2,6 +2,7 @@
 import { useToggle } from "@/hooks/useToggle";
 import NewExReTabs from "../Home/NewExReTabs";
 import BlogUpdateTable from "./BlogUpdateTable";
+import Link from "next/link";
 
 export default function BlogUpdate() {
   const { open, toggle } = useToggle(false);
@@ -14,7 +15,7 @@ export default function BlogUpdate() {
           <span className="text-[13px] text-nt160">Active Blogs: 34</span>
         </div>
         <div className="flex items-center flex-wrap gap-2 sm:gap-4">
-          <button className="py-2 sm:py-3 px-4 btngrdnt-child d-center gap-2 text-nt160">Draft</button>
+          <Link href="/" className="py-2 sm:py-3 px-4 btngrdnt-child d-center gap-2 text-nt160">Draft</Link> 
           <button onClick={toggle} className="btngrdnt">
             <span className="py-2 sm:py-3 px-4 btngrdnt-child d-center gap-2">
               March 2025 <i className="ph ph-caret-down"></i>

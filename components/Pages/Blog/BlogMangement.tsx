@@ -33,7 +33,7 @@ export default function BlogMangement() {
         <div className="col-span-5 xl:col-span-3">
           <div className="p-4 sm:p-7.5 border-r border-[#1F1F1F]">
             <span className="flex items-center mb-3">
-              <i className="ph ph-chart-bar text-nt180 text-2xl p-5 rounded-full bg-[#FC4B6C1F]"></i>
+              <i className="ph ph-chart-bar text-[#FC4B6C] text-2xl p-5 rounded-full bg-[#FC4B6C1F]"></i>
             </span>
             <div className="">
               <div className="flex items-end gap-1 mb-0.5">

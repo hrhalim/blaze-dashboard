@@ -56,7 +56,7 @@ const blogsData: BlogDataType[] = [
     title: "Meet the Volunteers Behind Our Successful Expungement Events",
     AuthorName: "Darrell Steward",    
     date: "06/01/2025",
-    status: "Live",
+    status: "Draft",
     views: "1,254",
     action: "",
   },
@@ -108,7 +108,7 @@ const blogsData: BlogDataType[] = [
   
 ];
 
-export default function BlogUpdateTable() {
+export default function BlogDraftTable() {
   return (
     <div className="w-full overflow-x-auto newexreq">
       <table className={`w-full text-left min-w-[1050px]`}>

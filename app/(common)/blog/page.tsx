@@ -6,6 +6,9 @@ import DatePicker from "@/components/DatePicker";
 import ItemListToggle from "@/components/ItemListToggle"; 
 import BlogMangement from "@/components/Pages/Blog/BlogMangement";
 import BlogUpdate from "@/components/Pages/Blog/BlogUpdate";
+import BlogPerformance from "@/components/Pages/Blog/BlogPerformance";
+import Audience from "@/components/Pages/Blog/Audience";
+import AverageRatings from "@/components/Pages/Blog/AverageRatings";
 
 export default function page() {
     return (
@@ -39,7 +42,9 @@ export default function page() {
                         <BlogUpdate/>
                         {/* Blog Performance, Audience, Average Ratings start here */}
                         <div className="grid grid-cols-12 gap-6 mb-6">
-                            
+                            <BlogPerformance/>
+                            <Audience/>
+                            <AverageRatings/>
                         </div>
                     </div>
                 </div>
