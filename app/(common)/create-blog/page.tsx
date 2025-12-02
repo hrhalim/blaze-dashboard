@@ -1,0 +1,40 @@
+import SideNavbar from "@/components/Share/SideNavbar";
+import HeaderTopBar from "@/components/Share/HeaderTopBar";
+import Link from "next/link";
+import CreateBlog from "@/components/Pages/CreateBlog/CreateBlog";
+
+export default function page() {
+  return (
+    <section className="pb-20">
+      <div className="container">
+        <div className="grid grid-cols-12 2xl:grid-cols-11 gap-6">
+          {/* Side Navbar area Starts here */}
+          <SideNavbar />
+          {/* Side Navbar area Ends here */}
+          <div className="col-span-12 lg:col-span-9">
+            <div className="pt-[30px] mb-6">
+              {/* Header Topbar area Starts here */}
+              <HeaderTopBar />
+              {/* Header Topbar area Starts here */}
+              <div className="mb-6">
+                <div className="flex items-center gap-1 mb-1">
+                  <Link
+                    href="/"
+                    className="flex items-center gap-1 text-nt160 text-sm md:text-base lg:text-lg">
+                    Home
+                    <i className="ph ph-caret-right text-sm md:text-base lg:text-lg"></i>
+                  </Link>
+                  <span className="text-sm md:text-base lg:text-lg text-primary">
+                    Create Blog
+                  </span>
+                </div>
+                <h1 className="text-[#BBBBBB] font-bold">Create New Blog</h1>
+              </div>
+            </div>
+            <CreateBlog />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
