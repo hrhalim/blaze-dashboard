@@ -55,7 +55,7 @@ export default function SideNavbar() {
               <li className="mb-1">
                 <Link
                   className="cmngradient1hvr w-full py-3 px-3 flex items-center gap-3 rounded-lg text-nt90"
-                  href="/">
+                  href="/blog">
                   <span className="d-center">
                     <i className="ph ph-article text-2xl"></i>
                   </span>
