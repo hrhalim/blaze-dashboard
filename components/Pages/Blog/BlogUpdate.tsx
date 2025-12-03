@@ -15,7 +15,7 @@ export default function BlogUpdate() {
           <span className="text-[13px] text-nt160">Active Blogs: 34</span>
         </div>
         <div className="flex items-center flex-wrap gap-2 sm:gap-4">
-          <Link href="/" className="py-2 sm:py-3 px-4 btngrdnt-child d-center gap-2 text-nt160">Draft</Link> 
+          <Link href="/blog-draft" className="py-2 sm:py-3 px-4 btngrdnt-child d-center gap-2 text-nt160">Draft</Link> 
           <button onClick={toggle} className="btngrdnt">
             <span className="py-2 sm:py-3 px-4 btngrdnt-child d-center gap-2">
               March 2025 <i className="ph ph-caret-down"></i>
