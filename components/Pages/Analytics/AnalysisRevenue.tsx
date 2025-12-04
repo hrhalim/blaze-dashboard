@@ -58,14 +58,6 @@ export default function AnalysisRevenue() {
       },
     },
     labels: ["Latino", "White", "Asian", "Black"],
-    responsive: [
-      {
-        breakpoint: 480,
-        options: {
-          chart: { width: 220 },
-        },
-      },
-    ],
   };
 
   return (
@@ -87,10 +79,10 @@ export default function AnalysisRevenue() {
           options={options}
           series={series}
           type="donut"
-          width={320}
+          width={220}
         />
         <div className="text-xs text-nt160 font-medium absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-          <span className="text-[#ffffff] font-medium text-[16px]">$8,260</span> <br /> March 2025
+          <span className="text-[#ffffff] font-medium text-[16px]">$8,260</span> March 2025
         </div>
       </div>
       <div className="flex items-center justify-between gap-2 flex-wrap">

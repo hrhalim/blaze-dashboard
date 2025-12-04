@@ -10,6 +10,7 @@ import TotalSales from "@/components/Pages/Analytics/TotalSales";
 import OverviewProfit from "@/components/Pages/Analytics/OverviewProfit";
 import YearlyExpungementApprovals from "@/components/Pages/Analytics/YearlyExpungementApprovals"; 
 import AnalyticsExpungements from "@/components/Pages/Analytics/AnalyticsExpungements";
+import EventsOrganized from "@/components/Pages/Analytics/EventsOrganized";
 
 export default function page() {
   return (
@@ -44,7 +45,10 @@ export default function page() {
             {/* TotalEarnings, Expungements, BlogPublished starts here */}
             <div className="grid xl:grid-cols-[1fr_268px_1fr] gap-6 mb-6">
               <TotalEarnings/> 
+              <div>
                <AnalyticsExpungements/>
+               <EventsOrganized/>
+              </div>
               <BlogPublished/>
             </div>
             {/* Total Analysis */}
@@ -55,7 +59,6 @@ export default function page() {
                 <OverviewProfit/>
                 <YearlyExpungementApprovals/>
             </div>
-    
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ export default function TotalAnalysis() {
           <h4 className="text-nt18 mb-1">Total Analysis</h4> 
         </div>
         <div className="flex items-center flex-wrap gap-2 sm:gap-4">
-          <button onClick={toggle} className="btngrdnt">
+          <button onClick={toggle} className="bg-nt120 rounded-[8px] text-[#7E49FF] font-medium">
             <span className="py-2 sm:py-3 px-4 btngrdnt-child d-center gap-2">
               March 2025 <i className="ph ph-caret-down"></i>
             </span>
@@ -25,7 +25,7 @@ export default function TotalAnalysis() {
             className={`
           transition-transform duration-500 ease-in-out
           transform top-68 sm:top-40 right-7 absolute w-[260px]
-          ${open ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"}
+          ${open ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 z-10"}
         `}>
             <div className="p-5 bg-white shadow-lg rounded-xl">
               <NewExReTabs />
@@ -34,7 +34,7 @@ export default function TotalAnalysis() {
         </div>
       </div>
       {/* <BlogUpdateTable /> */}
-      <div className="grid lg:grid-cols-[1fr_1fr_270px] gap-6 mb-6">
+      <div className="grid lg:grid-cols-[1fr_1fr_270px] gap-6">
           <AnalysisRevenueFirst/>
           <AnalysisItemSold/>
           <AnalysisRevenue/>

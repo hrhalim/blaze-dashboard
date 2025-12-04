@@ -105,7 +105,7 @@ export default function SideNavbar() {
               <li className="mb-1">
                 <Link
                   className="cmngradient1hvr w-full py-3 px-3 flex items-center gap-3 rounded-lg text-nt90"
-                  href="/">
+                  href="/support">
                   <span className="d-center">
                     <i className="ph ph-info text-2xl"></i>
                   </span>

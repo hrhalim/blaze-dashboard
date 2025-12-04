@@ -83,14 +83,13 @@ tooltip: {
 
   return (
     <div className="w-full bg-nt130 rounded-[20px] px-6 pt-6 pb-1">
-        <div className="flex justify-between flex-wrap mb-6">
+        <div className="flex justify-between flex-wrap mb-2 ">
           <div>
             <span className="text-nt160 font-normal text-[13px] pb-1.5">
               Blogs published
             </span>
             <h4 className="text-nt18 mb-0.5 font-medium">15</h4>
           </div>
-
           <div className="size-12 rounded-full border border-[#212023] d-center">
             <i className="ph ph-eye text-[#ffffff]"></i>
           </div>
