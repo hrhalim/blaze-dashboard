@@ -3,6 +3,7 @@ import "./globals.css";
 import "phosphor-icons/src/css/icons.css";
 import "../public/scss/default.scss";
 import "../public/scss/section.scss";
+import "../public/scss/halim.scss";
 
 export const metadata: Metadata = {
   title: "Create Next App",
