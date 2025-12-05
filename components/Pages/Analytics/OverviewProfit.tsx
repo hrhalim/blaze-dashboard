@@ -16,7 +16,7 @@ export default function OverviewProfit() {
     },
 
     dataLabels: {
-      enabled: false,
+      // enabled: false,
     },
 
     stroke: {
