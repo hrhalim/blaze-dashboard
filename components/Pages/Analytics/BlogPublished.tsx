@@ -18,66 +18,68 @@ const BlogPublished = () => {
     options: {
     chart: { 
         type: 'bar',
-         toolbar: {
+        toolbar: {
         show: false 
-    }
+      } 
     },
     colors: ['#FEC90F'], 
     plotOptions: {
-  bar: {
+    bar: {
     columnWidth: '75%',
     borderRadius: 12,
     borderRadiusApplication: 'around',
 
     colors: {
-      ranges: [{
-        from: 0,
-        to: 999999,
-        color: '#FEC90F'
-      }],
-      backgroundBarColors: ['#271E00'],
-      backgroundBarOpacity: 1,
-      backgroundBarRadius: 12
+        ranges: [{
+          from: 0,
+          to: 999999,
+          color: '#FEC90F'
+        }],
+        backgroundBarColors: ['#271E00'],
+        backgroundBarOpacity: 1,
+        backgroundBarRadius: 12
+      }
     }
-  }
-},
+  },
  
-tooltip: {
-  theme: 'dark',
-  fillSeriesColor: false
-},
-    dataLabels: {
-        enabled: false
-    },
+  tooltip: {
+    theme: 'dark',
+    fillSeriesColor: false
+  },
+  dataLabels: {
+      enabled: false
+  },
 
-    legend: {
-        show: false
-    },
+  legend: {
+      show: false
+  },
 
-    xaxis: {
-        categories: ['01', '02', '03', '04', '05', '06', '07'],
-        labels: {
-        style: {
-            colors: "#888888",
-            fontSize: '14px'
-        }
-        },
-        axisBorder: {
-        show: false    
-        },
-        axisTicks: {
-        show: false
-        }
-    },
+  xaxis: {
+      categories: ['01', '02', '03', '04', '05', '06', '07'],
+      labels: {
+      style: {
+          colors: "#888888",
+          fontSize: '14px'
+      }
+      },
+      axisBorder: {
+        show: true,
+        color: "#3A3A3A", 
+        height: 1,
+      },
+      axisTicks: {
+        show: true,
+        color: "#3A3A3A"
+      }
+  },
 
-    yaxis: {
-        show: false
-    },
-
-    grid: {
-        show: false
-    }
-    }
+  yaxis: {
+      show: false
+  },
+  grid: {
+      show: false
+  }
+  }
           
  });
 

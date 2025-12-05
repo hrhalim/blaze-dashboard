@@ -57,7 +57,6 @@ export default function MostVisitedTotalRevenue() {
         `;
       },
     },
-    labels: ["Latino", "White", "Asian", "Black"],
     responsive: [
       {
         breakpoint: 480,
@@ -82,7 +81,7 @@ export default function MostVisitedTotalRevenue() {
           <i className="ph ph-currency-dollar text-[#ffffff]"></i>
         </div>
       </div>
-      <div className="flex justify-center mb-5 relative">
+      <div className="flex justify-center mb-6 relative">
         <ReactApexChart
           options={options}
           series={series}
@@ -90,23 +89,9 @@ export default function MostVisitedTotalRevenue() {
           width={320}
         />
         <div className="text-xs text-nt160 font-medium absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-          <span className="text-[#ffffff] font-medium text-[16px]">$8,260</span> <br /> March 2025
+          <span className="text-[#ffffff] font-medium text-[16px]">$8,260</span> <br /> Jan 2025
         </div>
-      </div>
-      <div className="flex items-center justify-between gap-2 flex-wrap">
-        <div className="flex items-center gap-1">
-          <span className="size-1.5 rounded-full bg-nt170"></span>
-          <span className="font-medium text-nt170">+2.5%</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <span className="size-1.5 rounded-full bg-nt180"></span>
-          <span className="font-medium text-nt180">4k</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <span className="size-1.5 rounded-full bg-[#1E4DB7]"></span>
-          <span className="font-medium text-[#1E4DB7]">2.5k</span>
-        </div>
-      </div>
+      </div> 
     </div>
   );
 }

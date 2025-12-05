@@ -11,6 +11,12 @@ import OverviewProfit from "@/components/Pages/Analytics/OverviewProfit";
 import YearlyExpungementApprovals from "@/components/Pages/Analytics/YearlyExpungementApprovals"; 
 import AnalyticsExpungements from "@/components/Pages/Analytics/AnalyticsExpungements";
 import EventsOrganized from "@/components/Pages/Analytics/EventsOrganized";
+import MonthlyEarnings from "@/components/Pages/Analytics/MonthlyEarnings";
+import MostVisited from "@/components/Pages/Analytics/MostVisited";
+import MostVisitedAnalysisRevenue from "@/components/Pages/Analytics/MostVisitedAnalysisRevenue";
+import MostViewPageImpression3rd from "@/components/Pages/Analytics/MostViewPageImpression3rd";
+import MostViewPageImpression2nd from "@/components/Pages/Analytics/MostViewPageImpression2nd";
+import MostViewPageImpressionChange from "@/components/Pages/Analytics/MostViewPageImpressionChange";
 
 export default function page() {
   return (
@@ -53,11 +59,26 @@ export default function page() {
             </div>
             {/* Total Analysis */}
             <TotalAnalysis/>
-            {/* Total Sales,Expungement Analytics, Yearly Expungement Approvals Starts here */}
-            <div className="grid xl:grid-cols-[1fr_1fr_270px] gap-6 mb-6">
+            {/* Total Sales,OverviewProfit, YearlyExpungementApprovals, MonthlyEarnings Starts here */}
+            <div className="block lg:grid xl:grid-cols-[1fr_1fr_270px] gap-6 mb-6">
                 <TotalSales/>
                 <OverviewProfit/>
-                <YearlyExpungementApprovals/>
+                <div>
+                  <YearlyExpungementApprovals/>
+                  <MonthlyEarnings/>
+                </div>
+            </div>
+            {/* MostVisited,MostViewPageImpressionChange, MostViewPageImpression2nd, MostViewPageImpression3rd, MostVisitedAnalysisRevenue Starts here */}
+            <div className="block md:grid xl:grid-cols-[1fr_1fr_270px] gap-6 bg-[#171717] p-6 rounded-2xl">
+                <MostVisited/>
+                <div>
+                  <MostViewPageImpressionChange/>
+                  <div className="flex items-center justify-between gap-6">
+                     <MostViewPageImpression2nd/>
+                     <MostViewPageImpression3rd/>
+                  </div>
+                </div>
+                <MostVisitedAnalysisRevenue/>  
             </div>
           </div>
         </div>

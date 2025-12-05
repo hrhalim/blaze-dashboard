@@ -8,7 +8,7 @@ const ReactApexChart = dynamic(() => import("react-apexcharts"), {
 });
 
 export default function YearlyExpungementApprovals() {
-  const series = [20, 40, 30, 20];
+  const series = [20, 40, 30];
 
   const options: ApexCharts.ApexOptions = {
     chart: {
@@ -44,7 +44,7 @@ export default function YearlyExpungementApprovals() {
     },
     tooltip: {
       custom: function ({ series, seriesIndex }) {
-        const labels = ["+2.5%", "4k", "2.5k"];
+        const labels = ["2024", "2026", "2.2026"];
 
         return `
           <div style="
@@ -57,7 +57,6 @@ export default function YearlyExpungementApprovals() {
         `;
       },
     },
-    labels: ["Latino", "White", "Asian", "Black"],
     responsive: [
       {
         breakpoint: 480,
@@ -69,44 +68,41 @@ export default function YearlyExpungementApprovals() {
   };
 
   return (
-    <div className="bg-[#111111] rounded-[20px] px-7 py-7.5">
-      <div className="flex justify-between flex-wrap mb-6">
-        <div>
-          <span className="text-nt160 font-normal text-[13px] pb-1.5">
-            Total Revenue
-          </span>
-          <h4 className="text-nt18 mb-0.5 font-medium">$64,260</h4>
+    <div className="bg-[#111111] rounded-[20px] p-7 mb-6">
+        <span className="text-nt160 font-normal text-[13px] pb-1">
+          Yearly Expungement Approvals
+        </span>
+        <h4 className="text-nt18 mb-0.5 font-medium">1,358</h4>
+        <div className="flex items-center gap-3.5 pt-4">
+          <div>
+            <div className="flex items-center gap-3.5 pb-2">
+              <span className="text-[16px] font-medium text-[#39CB7F]">+9%</span>
+                <span className="text-nt160 font-normal text-[12px]">Approval Rate</span>
+            </div>
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-1">
+                <span className="size-1.5 rounded-full bg-[#1E4DB7]"></span>
+                <span className="font-medium text-[#1E4DB7]">2024</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="size-1.5 rounded-full bg-[#7E49FF]"></span>
+                <span className="font-medium text-[#7E49FF]">2025</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="size-1.5 rounded-full bg-[#FEC90F]"></span>
+                <span className="font-medium text-[#FEC90F]">2026</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <ReactApexChart
+              options={options}
+              series={series}
+              type="donut"
+              width={90}
+            />
+          </div>
         </div>
-
-        <div className="size-12 rounded-full border border-[#212023] d-center">
-          <i className="ph ph-currency-dollar text-[#ffffff]"></i>
-        </div>
-      </div>
-      <div className="flex justify-center mb-5 relative">
-        <ReactApexChart
-          options={options}
-          series={series}
-          type="donut"
-          width={320}
-        />
-        <div className="text-xs text-nt160 font-medium absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-          <span className="text-[#ffffff] font-medium text-[16px]">$8,260</span> <br /> March 2025
-        </div>
-      </div>
-      <div className="flex items-center justify-between gap-2 flex-wrap">
-        <div className="flex items-center gap-1">
-          <span className="size-1.5 rounded-full bg-nt170"></span>
-          <span className="font-medium text-nt170">+2.5%</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <span className="size-1.5 rounded-full bg-nt180"></span>
-          <span className="font-medium text-nt180">4k</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <span className="size-1.5 rounded-full bg-[#1E4DB7]"></span>
-          <span className="font-medium text-[#1E4DB7]">2.5k</span>
-        </div>
-      </div>
     </div>
   );
 }

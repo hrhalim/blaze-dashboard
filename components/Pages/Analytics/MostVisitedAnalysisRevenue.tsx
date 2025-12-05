@@ -1,20 +1,17 @@
 "use client";
-
-import React from "react";
 import dynamic from "next/dynamic";
-
 const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
 
-export default function MonthlyEarnings() {
+export default function MostVisitedAnalysisRevenue() {
   const series = [20, 40, 30, 20];
 
   const options: ApexCharts.ApexOptions = {
     chart: {
       type: "donut",
     },
-
+ 
     dataLabels: {
       enabled: false,
     },
@@ -58,24 +55,16 @@ export default function MonthlyEarnings() {
       },
     },
     labels: ["Latino", "White", "Asian", "Black"],
-    responsive: [
-      {
-        breakpoint: 480,
-        options: {
-          chart: { width: 220 },
-        },
-      },
-    ],
   };
 
   return (
-    <div className="bg-[#111111] rounded-[20px] px-7 py-7.5">
-      <div className="flex justify-between flex-wrap mb-6">
+    <div className="bg-[#111111] rounded-[20px] px-7 py-7 mt-6 md:mt:0">
+      <div className="flex justify-between flex-wrap mb-7 pb-3">
         <div>
           <span className="text-nt160 font-normal text-[13px] pb-1.5">
             Total Revenue
           </span>
-          <h4 className="text-nt18 mb-0.5 font-medium">$64,260</h4>
+          <h4 className="text-nt18 mb-0.5 font-medium">$44,260</h4>
         </div>
 
         <div className="size-12 rounded-full border border-[#212023] d-center">
@@ -87,26 +76,38 @@ export default function MonthlyEarnings() {
           options={options}
           series={series}
           type="donut"
-          width={320}
+          width={210}
         />
         <div className="text-xs text-nt160 font-medium absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-          <span className="text-[#ffffff] font-medium text-[16px]">$8,260</span> <br /> March 2025
+          <span className="text-[#ffffff] font-medium text-[16px]">$8,260</span> March 2025
         </div>
       </div>
-      <div className="flex items-center justify-between gap-2 flex-wrap">
-        <div className="flex items-center gap-1">
-          <span className="size-1.5 rounded-full bg-nt170"></span>
-          <span className="font-medium text-nt170">+2.5%</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <span className="size-1.5 rounded-full bg-nt180"></span>
-          <span className="font-medium text-nt180">4k</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <span className="size-1.5 rounded-full bg-[#1E4DB7]"></span>
-          <span className="font-medium text-[#1E4DB7]">2.5k</span>
-        </div>
-      </div>
+      <div className="flex justify-between">
+          {/* Item  */}
+          <div className="flex items-center gap-4">
+            <div className="size-9 rounded-full border border-[#212023] d-center">
+              <i className="ph ph-pencil-simple text-[#FEC90F]"></i>
+            </div>
+            <div>
+              <span className="text-nt160 font-normal text-[13px] pb-1.5">
+              Products
+              </span>
+              <h4 className="text-[#ffffff] text-[14px] font-medium">$36,358</h4>
+            </div> 
+          </div>
+           {/* Item  */}
+          <div className="flex items-center gap-4">
+            <div className="size-9 rounded-full border border-[#212023] d-center">
+              <i className="ph ph-file text-[#7E49FF]"></i>
+            </div>
+            <div>
+              <span className="text-nt160 font-normal text-[13px] pb-1.5">
+              Invoice
+              </span>
+              <h4 className="text-[#ffffff] text-[14px] font-medium">358</h4>
+            </div> 
+          </div> 
+        </div> 
     </div>
   );
 }

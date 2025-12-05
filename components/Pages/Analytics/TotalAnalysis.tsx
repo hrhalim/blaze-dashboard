@@ -1,7 +1,6 @@
 "use client";
 import { useToggle } from "@/hooks/useToggle";
 import NewExReTabs from "../Home/NewExReTabs"; 
-import Link from "next/link"; 
 import AnalysisRevenue from "./AnalysisRevenue";
 import AnalysisRevenueFirst from "./AnalysisRevenueFirst";
 import AnalysisItemSold from "./AnalysisItemSold";
@@ -25,10 +24,10 @@ export default function TotalAnalysis() {
             className={`
           transition-transform duration-500 ease-in-out
           transform top-68 sm:top-40 right-7 absolute w-[260px]
-          ${open ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 z-10"}
+          ${open ? "translate-y-0 opacity-100 z-20" : "translate-y-full opacity-0"}
         `}>
             <div className="p-5 bg-white shadow-lg rounded-xl">
-              <NewExReTabs />
+              <NewExReTabs /> 
             </div>
           </div>
         </div>

@@ -2,73 +2,43 @@
 
 import React from "react";
 import dynamic from "next/dynamic";
+import { ApexOptions } from "apexcharts";
 
-const ReactApexChart = dynamic(() => import("react-apexcharts"), {
-  ssr: false,
-});
+const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 export default function OverviewProfit() {
-  const series = [20, 40, 30, 20];
-
-  const options: ApexCharts.ApexOptions = {
-    chart: {
-      type: "donut",
-    },
-
-    dataLabels: {
-      // enabled: false,
-    },
-
-    stroke: {
-      width: 4,
-      colors: ["#111111"],
-    },
-
+  const [state] = React.useState<{
+    series: { name: string; data: number[] }[];
+    options: ApexOptions;
+  }>({
     series: [
-      {
-        data: [30, 60, 45],
-      },
+      { name: "Certified", data: [50, 44, 60, 40, 50, 50] },
+      { name: "Filed", data: [12, 32, 20, 33, 25, 20] },
     ],
-
-    colors: ["#FEC90F", "#1A9BFC", "#1E4DB7"],
-
-    plotOptions: {
-      pie: {
-        donut: {
-          size: "65%",
-        },
+    options: {
+      chart: { type: "line", toolbar: { show: false } },
+      colors: ["#1E4DB7", "#39CB7F"],
+      stroke: { curve: "stepline", width: 3 },
+      dataLabels: { enabled: false },
+      legend: { labels: { colors: "#ffffff" } },
+      xaxis: {
+        categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        labels: { style: { colors: "#777E89" } },
+        axisBorder: { show: false },
+        axisTicks: { show: false },
       },
-    },
-    legend: {
-      show: false,
-    },
-    tooltip: {
-      custom: function ({ series, seriesIndex }) {
-        const labels = ["+2.5%", "4k", "2.5k"];
-
-        return `
-          <div style="
-            background:#111827;
-            color:white;
-            border-radius:6px;
-            font-size:14px;">
-            ${labels[seriesIndex]}: ${series[seriesIndex]}
-          </div>
-        `;
+      yaxis: {
+        labels: { style: { colors: "#777E89" } },
+        axisBorder: { show: false },
+        axisTicks: { show: false },
       },
+      tooltip: { theme: "dark", fillSeriesColor: false },
+      grid: { show: false, borderColor: "#333" },
     },
-    responsive: [
-      {
-        breakpoint: 480,
-        options: {
-          chart: { width: 220 },
-        },
-      },
-    ],
-  };
+  });
 
   return (
-    <div className="bg-[#111111] rounded-[20px] px-7 py-7.5">
+    <div className="bg-[#111111] rounded-[20px] px-7 py-8 my-6 md:my-0">
       <div className="flex justify-between flex-wrap mb-6">
         <div>
           <span className="text-nt160 font-normal text-[13px] pb-1.5">
@@ -77,35 +47,17 @@ export default function OverviewProfit() {
           <h4 className="text-nt18 mb-0.5 font-medium">Overview of Profit</h4>
         </div>
 
-        <div className="size-12 rounded-full border border-[#212023] d-center">
+        <div className="w-12 h-12 rounded-full border border-[#212023] flex items-center justify-center">
           <i className="ph ph-currency-dollar text-[#ffffff]"></i>
         </div>
       </div>
-      <div className="flex justify-center mb-5 relative">
-        <ReactApexChart
-          options={options}
-          series={series}
-          type="donut"
-          width={320}
-        />
-        <div className="text-xs text-nt160 font-medium absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-          <span className="text-[#ffffff] font-medium text-[16px]">$8,260</span> <br /> March 2025
-        </div>
-      </div>
-      <div className="flex items-center justify-between gap-2 flex-wrap">
-        <div className="flex items-center gap-1">
-          <span className="size-1.5 rounded-full bg-nt170"></span>
-          <span className="font-medium text-nt170">+2.5%</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <span className="size-1.5 rounded-full bg-nt180"></span>
-          <span className="font-medium text-nt180">4k</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <span className="size-1.5 rounded-full bg-[#1E4DB7]"></span>
-          <span className="font-medium text-[#1E4DB7]">2.5k</span>
-        </div>
-      </div>
+
+      <ReactApexChart
+        series={state.series}
+        options={state.options}
+        type="line"
+        height={250}
+      />
     </div>
   );
 }

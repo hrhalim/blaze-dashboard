@@ -7,7 +7,7 @@ const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
 
-const MonthlyEarnings = () => {
+const MostViewPageImpression3rd = () => {
   const [state] = React.useState<{
     series: ApexAxisChartSeries;
     options: ApexCharts.ApexOptions;
@@ -28,7 +28,7 @@ const MonthlyEarnings = () => {
      stroke: {
       curve: 'smooth',
       width: 1,
-      colors: ['#3694EB'] 
+      colors: ['#39CB7F'] 
     },
      fill: {
       type: 'gradient',
@@ -67,23 +67,12 @@ const MonthlyEarnings = () => {
  });
 
   return (
-    <div className="w-full bg-nt130 rounded-[20px] p-6 relative">
-      <div className="flex justify-between flex-wrap mb-5 pb-4">
-        <div>
-          <span className="text-nt160 font-normal text-[13px] pb-1.5">
-            Monthly Earnings
-          </span>
-          <h4 className="text-[24px] font-medium">$6,820</h4>
-        </div>
-
-        <div className="size-13 rounded-full border border-[#212023] d-center">
-          <i className="ph ph-file-text text-[#ffffff]"></i>
-        </div>
-      </div>
-        <div>
-          <span className="text-[#777E89] text-[12px]">Approval Rate</span>
-          <span className="text-[#39CB7F] font-medium text-[16px]">9%</span>
-        </div>
+    <div className="w-full bg-[#111111] rounded-[20px] p-6 relative">
+        <span className="text-nt160 font-normal text-[13px] pb-1">
+          Page Impressions
+        </span>
+        <h4 className="text-[24px] font-medium">856,120</h4> 
+      <span className="text-[#39CB7F] font-medium text-[16px] pt-7.5 mt-7.5">+9%</span>
       <div className="absolute bottom-0 right-[24px] w-[100px]">
         <ReactApexChart
           options={state.options}
@@ -95,4 +84,4 @@ const MonthlyEarnings = () => {
   );
 };
 
-export default MonthlyEarnings;
+export default MostViewPageImpression3rd;

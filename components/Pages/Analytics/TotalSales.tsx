@@ -68,8 +68,8 @@ options: {
  });
 
   return (
-    <div className="w-full bg-nt130 rounded-[20px] px-6 pt-6 pb-1">
-        <div className="flex justify-between flex-wrap mb-6">
+    <div className="w-full bg-nt130 rounded-[20px] p-6">
+        <div className="flex justify-between flex-wrap">
           <div>
             <span className="text-nt160 font-normal text-[13px] pb-1.5">
               Yearly Revenue
@@ -84,11 +84,11 @@ options: {
         <ReactApexChart
           options={state.options}
           series={state.series}
-          type="bar"
+          type="bar" 
         /> 
         <div className="flex justify-between">
           {/* Item  */}
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4">
             <div className="size-9 rounded-full border border-[#212023] d-center">
               <i className="ph ph-eye text-[#FEC90F]"></i>
             </div>
@@ -100,7 +100,7 @@ options: {
             </div> 
           </div>
            {/* Item  */}
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4">
             <div className="size-9 rounded-full border border-[#212023] d-center">
               <i className="ph ph-file text-[#7E49FF]"></i>
             </div>
@@ -112,7 +112,7 @@ options: {
             </div> 
           </div>
            {/* Item  */}
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4">
             <div className="size-9 rounded-full border border-[#212023] d-center">
               <i className="ph ph-hourglass-simple-medium text-[#1E4DB7]"></i>
             </div>
