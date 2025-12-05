@@ -57,7 +57,6 @@ export default function OverviewProfit() {
         `;
       },
     },
-    labels: ["Latino", "White", "Asian", "Black"],
     responsive: [
       {
         breakpoint: 480,
