@@ -68,7 +68,7 @@ const blogsData: BlogDataType[] = [
   },
   {
     image: blog_5,
-    title: "Real Stories from Victeam Expungement Events",
+    title: "Real Stories from Victeam Expungement",
     types: ["5 Videos"],
     category: "News",    
     date: "06/01/2025",
@@ -92,7 +92,7 @@ const blogsData: BlogDataType[] = [
     types: ["5 Videos", "10 Images"],
     category: "News",    
     date: "06/01/2025",
-    status: "Draft",
+    status: "Active",
     views: "1,254",
     action: "delete",
   },
@@ -102,17 +102,17 @@ const blogsData: BlogDataType[] = [
     types: ["5 Videos"],
     category: "Expungements",    
     date: "06/01/2025",
-    status: "Draft",
+    status: "Active",
     views: "8,254",
     action: "delete",
   },
   {
     image: blog_9,
-    title: "Why Expungement Events Are Essential for a Fresh Start",
+    title: "Why Expungement Events Are Essential",
     types: ["5 Videos"],
     category: "News",    
     date: "06/01/2025",
-    status: "Draft",
+    status: "Active",
     views: "1,254",
     action: "delete",
   }
@@ -133,12 +133,25 @@ export default function Memories() {
           <span className="text-[13px] text-nt160">Recent uploaded Medias: 16</span>
         </div>
         <div className="flex items-center flex-wrap gap-2 sm:gap-4">
-          <Link href="/blog-draft" className="py-2 sm:py-3 px-4 btngrdnt-child d-center gap-2 text-nt160">Draft</Link> 
-          <button className="btngrdnt">
-            <span className="py-2 sm:py-3 px-6 btngrdnt-child d-center gap-2">
+        {/* SEARCH */}
+          <form className="max-w-[190px]">
+            <div className="flex items-center gap-2 py-3.5 px-4 rounded-lg bg-[#0A0A0A]">
+              <span className="d-center cursor-pointer">
+                <i className="ph ph-magnifying-glass text-nt160 text-xl"></i>
+              </span>
+              <input
+                className="bg-transparent placeholder:text-nt160 text-nt160 sm:min-w-[315px]"
+                type="text"
+                placeholder="Search..."
+              />
+            </div>
+          </form>
+          <Link href="/media/draft" className="py-2 sm:py-3 px-4 btngrdnt-child d-center gap-2 text-nt160">Draft</Link>
+          <Link href="/media" className="btngrdnt">
+           <span className="py-2 sm:py-3 px-6 btngrdnt-child d-center gap-2">
               Active 
             </span>
-          </button>
+          </Link>
         </div>
       </div> 
       <div className="w-full overflow-x-auto newexreq">
