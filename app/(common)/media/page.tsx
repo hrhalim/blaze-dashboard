@@ -8,6 +8,8 @@ import BlogUpdate from "@/components/Pages/Blog/BlogUpdate";
 import BlogPerformance from "@/components/Pages/Blog/BlogPerformance";
 import Audience from "@/components/Pages/Blog/Audience";
 import AverageRatings from "@/components/Pages/Blog/AverageRatings";
+import UserManagement from "@/components/Pages/Media/UserManagement";
+import Memories from "@/components/Pages/Media/Memories";
 
 export default function page() {
     return (
@@ -24,7 +26,7 @@ export default function page() {
                         {/* Header Topbar area Starts here */}
                         <div className="flex items-center justify-between max-sm:flex-wrap gap-3">
                             <div className="">
-                                <h1>Blog Management</h1>
+                                <h1>User Management</h1>
                             </div>
                             <div className="flex items-center gap-2 max-sm:flex-wrap">
                                 <div className="">
@@ -35,10 +37,10 @@ export default function page() {
                                 </div>
                             </div>
                         </div>
-                        {/* Blog Mangement Starts here */}
-                        <BlogMangement/>
+                        {/* UserManagement Starts here */}
+                        <UserManagement/>
                         {/* Blog Update Starts here */}
-                        <BlogUpdate/>
+                        <Memories/>
                         {/* Blog Performance, Audience, Average Ratings start here */}
                         <div className="grid grid-cols-12 gap-6 mb-6">
                             <BlogPerformance/>

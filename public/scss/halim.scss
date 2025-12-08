@@ -26,3 +26,19 @@
     }
     
 }
+
+  
+
+// Media flow page 
+.media-typeitem {
+  li {
+    &:nth-child(1) {
+      background-color: #1A9BFC3D;
+      color: #1A9BFC;
+    }
+    &:nth-child(2) {
+      background-color: #FEC90F3D;
+      color: #FEC90F;
+    }
+  }
+}
