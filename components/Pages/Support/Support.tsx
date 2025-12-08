@@ -2,9 +2,9 @@
 import { useState } from "react";
 
 export default function Support() {
-  const [openIndex, setOpenIndex] = useState(null);
+ const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleAccordion = (i) => {
+  const toggleAccordion = (i: number) => {
     setOpenIndex(openIndex === i ? null : i);
   };
 
@@ -22,7 +22,7 @@ export default function Support() {
       a: "Blaze Responsibly™ is a social impact initiative founded by attorney and cannabis advocate Chirali Patel. Established in 2018, the platform is dedicated to promoting responsible cannabis use, advancing social equity, and providing education around cannabis law, policy, and entrepreneurship. Through a combination of legal expertise, community engagement, and public education, Blaze Responsibly™ empowers individuals and communities—especially those disproportionately impacted by past cannabis laws—to participate in and benefit from the evolving cannabis industry. The initiative also hosts free expungement clinics and workshops across New Jersey, "
     },
     {
-      q: "What is Blaze Responsibly™?",
+      q: "What legal services does Blaze Law Firm provide?",
       a: "Blaze Responsibly™ is a social impact initiative founded by attorney and cannabis advocate Chirali Patel. Established in 2018, the platform is dedicated to promoting responsible cannabis use, advancing social equity, and providing education around cannabis law, policy, and entrepreneurship. Through a combination of legal expertise, community engagement, and public education, Blaze Responsibly™ empowers individuals and communities—especially those disproportionately impacted by past cannabis laws—to participate in and benefit from the evolving cannabis industry. The initiative also hosts free expungement clinics and workshops across New Jersey, "
     },
     {

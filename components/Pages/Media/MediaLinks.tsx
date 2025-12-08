@@ -57,7 +57,7 @@ export default function MediaLinks() {
           </span>
         </button>
       </div> 
-      <div className="w-full overflow-auto">
+      <div className="w-full overflow-x-auto">
         <table className="w-full text-left">
           <thead className="bg-[#0A0A0A]">
             <tr className="my-4 mx-7.5">

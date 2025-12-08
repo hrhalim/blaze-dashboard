@@ -4,7 +4,7 @@
 .accordion-item {
     &.active {
         position: relative;
-        background: linear-gradient(90deg, #44386E 0%, #000000 100%);  
+        background: linear-gradient(0deg, #44386E 0%, #000000 100%);  
         border: transparent;
         &::before { 
             content: "";
