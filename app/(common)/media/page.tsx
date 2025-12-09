@@ -7,6 +7,7 @@ import UserManagement from "@/components/Pages/Media/UserManagement";
 import Memories from "@/components/Pages/Media/Memories";
 import TopActiveMedias from "@/components/Pages/Media/TopActiveMedias";
 import MediaLinks from "@/components/Pages/Media/MediaLinks";
+import ExpungementsChecklistInformation from "@/components/Share/ExpungementsChecklistInformation";
 
 export default function page() {
     return (
