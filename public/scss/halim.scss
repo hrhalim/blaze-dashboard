@@ -42,3 +42,22 @@
     }
   }
 }
+
+// Gradiant button two 
+.btngrdnt-2 {
+    background: linear-gradient(0deg, #FF3030 0%, #000000 100%);
+    border-radius: 8px;
+    padding: 1px;
+    border: none;
+    cursor: pointer;
+    background-position: bottom;
+    transition: background-position 0.4s ease;
+
+    .btngrdnt-child-2 {
+        background: linear-gradient(180deg, #FF303066 0%, #230000 100%);
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: background-position 0.4s ease;
+    }
+}

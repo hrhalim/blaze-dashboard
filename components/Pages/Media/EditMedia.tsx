@@ -7,7 +7,7 @@ type Option = {
   value: string;
 };
 
-export default function AddNewMedia() {
+export default function EditMedia() {
   // 3 preview images
   const [previewImages, setPreviewImages] = useState<(string | null)[]>([
     null,
@@ -222,10 +222,15 @@ export default function AddNewMedia() {
             </div>
           </div>
         </div>
-        <div className="text-end">
+        <div className="flex items-center gap-5 justify-end">
+          <button type="submit" className="btngrdnt-2">
+            <span className=" rounded-[8px] py-3 px-6 btngrdnt-child-2">
+              Delete
+            </span>
+          </button>
           <button type="submit" className="btngrdnt">
-            <span className="btngrdnt-child py-3 md:py-4.5 px-5 md:px-6">
-              Published
+            <span className="btngrdnt-child py-3 px-7">
+              Save
             </span>
           </button>
         </div>

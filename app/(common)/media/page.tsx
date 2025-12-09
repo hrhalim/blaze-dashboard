@@ -3,11 +3,6 @@ import SideNavbar from "@/components/Share/SideNavbar";
 import HeaderTopBar from "@/components/Share/HeaderTopBar"; 
 import DatePicker from "@/components/DatePicker";
 import ItemListToggle from "@/components/ItemListToggle"; 
-import BlogMangement from "@/components/Pages/Blog/BlogMangement";
-import BlogUpdate from "@/components/Pages/Blog/BlogUpdate";
-import BlogPerformance from "@/components/Pages/Blog/BlogPerformance";
-import Audience from "@/components/Pages/Blog/Audience";
-import AverageRatings from "@/components/Pages/Blog/AverageRatings";
 import UserManagement from "@/components/Pages/Media/UserManagement";
 import Memories from "@/components/Pages/Media/Memories";
 import TopActiveMedias from "@/components/Pages/Media/TopActiveMedias";
@@ -28,7 +23,7 @@ export default function page() {
                         {/* Header Topbar area Starts here */}
                         <div className="flex items-center justify-between max-sm:flex-wrap gap-3">
                             <div className="">
-                                <h1>User Management</h1>
+                                <h1>Media Management</h1>
                             </div>
                             <div className="flex items-center gap-2 max-sm:flex-wrap">
                                 <div className="">

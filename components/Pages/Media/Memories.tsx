@@ -202,7 +202,7 @@ export default function Memories() {
                     >
                       {item.status}
                     </span>
-                    <Link href="/media/upload"> 
+                    <Link href="/media/edit"> 
                       <i className="ph ph-pencil-simple text-[#ffffff]"></i> 
                     </Link>
                     {item.action !== "" && (
