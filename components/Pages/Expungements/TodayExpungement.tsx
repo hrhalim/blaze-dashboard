@@ -59,7 +59,7 @@ export default function TodayExpungement() {
         </div>
       </div>
       <div className="flex items-center justify-end">
-        <Link href="/" className="btngrdnt">
+        <Link href="/expungements-details" className="btngrdnt">
           <span className="btngrdnt-child px-8 py-3">Enter Expungement</span>
         </Link>
       </div>

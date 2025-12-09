@@ -121,9 +121,11 @@ export default function ExpungementNotifications() {
               <Link
                 href="/"
                 className="flex items-center gap-1 text-nt160 text-lg">
-                Home <i className="ph ph-caret-right text-lg"></i>
+                Home <i className="ph ph-caret-right text-base lg:text-lg"></i>
               </Link>
-              <span className="text-lg text-primary">Notifications</span>
+              <span className="text-base lg:text-lg text-primary">
+                Notifications
+              </span>
             </div>
             <h1 className="text-[#BBBBBB] font-bold">
               Expungement Notifications
@@ -152,7 +154,7 @@ export default function ExpungementNotifications() {
       </div>
 
       {/* Table Wrapper */}
-      <div className="bg-nt130 p-7.5 rounded-[20px]">
+      <div className="bg-nt130 p-5 md:p-7.5 rounded-[20px]">
         <div className="mb-7.5">
           <h4 className="mb-1">Recent Ticket Purchases</h4>
           <span className="text-[#777E89] text-[13px]">

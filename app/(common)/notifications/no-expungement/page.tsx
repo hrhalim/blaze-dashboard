@@ -10,7 +10,9 @@ export default function page() {
       <div className="container">
         <div className="grid grid-cols-12 2xl:grid-cols-11 gap-6">
           {/* Side Navbar area Starts here */}
-          <SideNavbar />
+          <div className="max-lg:hidden lg:col-span-3 2xl:col-span-2 h-full border-r border-nt110">
+            <SideNavbar />
+          </div>
           {/* Side Navbar area Ends here */}
           <div className="col-span-12 lg:col-span-9">
             <div className="pt-[30px] mb-6">
@@ -25,10 +27,10 @@ export default function page() {
                       <div className="flex items-center gap-1 mb-1">
                         <Link
                           href="/"
-                          className="flex items-center gap-1 text-nt160 text-lg">
+                          className="flex items-center gap-1 text-nt160 text-base lg:text-lg">
                           Home <i className="ph ph-caret-right text-lg"></i>
                         </Link>
-                        <span className="text-lg text-primary">
+                        <span className="text-base lg:text-lg text-primary">
                           Notifications
                         </span>
                       </div>

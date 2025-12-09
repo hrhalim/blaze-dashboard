@@ -19,7 +19,7 @@ export default function NewExReTabs() {
               transition-all duration-300 
               ${
                 active === i
-                  ? "bg-purple-600 text-primary border-b-2 border-primary forlineactive"
+                  ? "text-primary border-b-2 border-primary forlineactive"
                   : "bg-gray-100 text-nt120"
               }
             `}>

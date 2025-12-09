@@ -1,7 +1,6 @@
 import SideNavbar from "@/components/Share/SideNavbar";
 import HeaderTopBar from "@/components/Share/HeaderTopBar";
-import Link from "next/link";
-import AddNewMedia from "@/components/Pages/Media/AddNewMedia";
+import Link from "next/link"; 
 import EditMedia from "@/components/Pages/Media/EditMedia";
 
 export default function page() {
@@ -10,7 +9,9 @@ export default function page() {
       <div className="container">
         <div className="grid grid-cols-12 2xl:grid-cols-11 gap-6">
           {/* Side Navbar area Starts here */}
-          <SideNavbar />
+          <div className="max-lg:hidden lg:col-span-3 2xl:col-span-2 h-full border-r border-nt110">
+            <SideNavbar />
+          </div>
           {/* Side Navbar area Ends here */}
           <div className="col-span-12 lg:col-span-9">
             <div className="pt-[30px] mb-6">

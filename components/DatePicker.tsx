@@ -84,7 +84,7 @@ const DatePicker: React.FC = () => {
         {/* <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-600 to-violet-700 flex items-center justify-center text-white font-semibold">
           {today.getDate()}
         </div> */}
-        <div className="bg-nt120 flex items-center gap-1 rounded-xl px-4 py-2.5 border border-nt30 hover:border-nt80">
+        <div className="bg-nt120 flex items-center gap-1 rounded-xl px-4 py-2.5 border border-nt30">
           <div className="text-left flex items-center gap-1">
             <div className="text-sm font-medium text-nt160">Today</div>
             <div className="text-sm font-medium text-nt160">

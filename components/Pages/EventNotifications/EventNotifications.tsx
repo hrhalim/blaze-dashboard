@@ -75,10 +75,12 @@ export default function EventNotifications() {
             <div className="flex items-center gap-1 mb-1">
               <Link
                 href="/"
-                className="flex items-center gap-1 text-nt160 text-lg">
+                className="flex items-center gap-1 text-nt160 text-base lg:text-lg">
                 Home <i className="ph ph-caret-right text-lg"></i>
               </Link>
-              <span className="text-lg text-primary">Notifications</span>
+              <span className="text-base lg:text-lg text-primary">
+                Notifications
+              </span>
             </div>
             <h1 className="text-[#BBBBBB] font-bold">Event Notifications</h1>
           </div>
@@ -105,7 +107,7 @@ export default function EventNotifications() {
       </div>
 
       {/* Table Wrapper */}
-      <div className="bg-nt130 p-7.5 rounded-[20px]">
+      <div className="bg-nt130 p-5 md:p-7.5 rounded-[20px]">
         <div className="mb-7.5">
           <h4 className="mb-1">Recent Ticket Purchases</h4>
           <span className="text-[#777E89] text-[13px]">

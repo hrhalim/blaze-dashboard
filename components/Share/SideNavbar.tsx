@@ -1,130 +1,54 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import logo from "@/public/images/logo.png";
 
 export default function SideNavbar() {
+  const pathname = usePathname();
+
+  // Define menu items to reduce repetition
+  const menuItems = [
+    { href: "/", label: "Home", icon: "ph-house" },
+    { href: "/expungements", label: "Expungements", icon: "ph-sticker" },
+    { href: "/shops", label: "Shops", icon: "ph-shopping-cart-simple" },
+    { href: "/event-management", label: "Events", icon: "ph-ticket" },
+    { href: "/blog", label: "Blogs", icon: "ph-article" },
+    { href: "/analytics", label: "Analytics", icon: "ph-chart-pie" },
+    { href: "/invoices", label: "Invoices", icon: "ph-file" },
+    { href: "/user-managements", label: "User Managements", icon: "ph-users" },
+    { href: "/media", label: "Medias", icon: "ph-film-slate" },
+    { href: "/support", label: "Help & Support", icon: "ph-info" },
+    { href: "/settings", label: "Settings", icon: "ph-gear" },
+  ];
+
   return (
     <>
-      <div className="max-lg:hidden lg:col-span-3 2xl:col-span-2 h-full border-r border-nt110">
-        <div className="px-6 sticky top-0">
-          <div className="py-[30px]">
-            <Image src={logo} alt="Logo" />
-          </div>
-          <nav>
-            <ul>
-              <li className="mb-1 btngrdnt">
-                <Link
-                  className="btngrdnt-child w-full py-3 px-3 flex items-center gap-3 rounded-lg"
-                  href="/">
-                  <span className="d-center">
-                    <i className="ph ph-house text-2xl"></i>
-                  </span>
-                  <span className="text-[15px] textclass">Home</span>
-                </Link>
-              </li>
-              <li className="mb-1 cmngradient1hvr">
-                <Link
-                  className="btngrdnt-child w-full py-3 px-3 flex items-center gap-3 rounded-lg text-nt90"
-                  href="/">
-                  <span className="d-center">
-                    <i className="ph ph-sticker text-2xl"></i>
-                  </span>
-                  <span className="text-[15px]=">Expungements</span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link
-                  className="cmngradient1hvr w-full py-3 px-3 flex items-center gap-3 rounded-lg text-nt90"
-                  href="/">
-                  <span className="d-center">
-                    <i className="ph ph-shopping-cart-simple text-2xl"></i>
-                  </span>
-                  <span className="text-[15px]=">Shops</span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link
-                  className="cmngradient1hvr w-full py-3 px-3 flex items-center gap-3 rounded-lg text-nt90"
-                  href="/">
-                  <span className="d-center">
-                    <i className="ph ph-ticket text-2xl"></i>
-                  </span>
-                  <span className="text-[15px]=">Events</span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link
-                  className="cmngradient1hvr w-full py-3 px-3 flex items-center gap-3 rounded-lg text-nt90"
-                  href="/blog">
-                  <span className="d-center">
-                    <i className="ph ph-article text-2xl"></i>
-                  </span>
-                  <span className="text-[15px]=">Blogs</span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link
-                  className="cmngradient1hvr w-full py-3 px-3 flex items-center gap-3 rounded-lg text-nt90"
-                  href="/analytics">
-                  <span className="d-center">
-                    <i className="ph ph-chart-pie text-2xl"></i>
-                  </span>
-                  <span className="text-[15px]=">Analytics</span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link
-                  className="cmngradient1hvr w-full py-3 px-3 flex items-center gap-3 rounded-lg text-nt90"
-                  href="/an">
-                  <span className="d-center">
-                    <i className="ph ph-file text-2xl"></i>
-                  </span>
-                  <span className="text-[15px]=">Invoices</span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link
-                  className="cmngradient1hvr w-full py-3 px-3 flex items-center gap-3 rounded-lg text-nt90"
-                  href="/">
-                  <span className="d-center">
-                    <i className="ph ph-users text-2xl"></i>
-                  </span>
-                  <span className="text-[15px]=">User Managements</span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link
-                  className="cmngradient1hvr w-full py-3 px-3 flex items-center gap-3 rounded-lg text-nt90"
-                  href="/media">
-                  <span className="d-center">
-                    <i className="ph ph-film-slate text-2xl"></i>
-                  </span>
-                  <span className="text-[15px]=">Medias</span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link
-                  className="cmngradient1hvr w-full py-3 px-3 flex items-center gap-3 rounded-lg text-nt90"
-                  href="/support">
-                  <span className="d-center">
-                    <i className="ph ph-info text-2xl"></i>
-                  </span>
-                  <span className="text-[15px]=">Help & Support</span>
-                </Link>
-              </li>
-              <li className="mb-1 relative">
-                <Link
-                  className="cmngradient1hvr cmngradient1hvrb w-full py-3 px-3 flex items-center gap-3 rounded-lg text-nt90"
-                  href="/">
-                  <span className="d-center">
-                    <i className="ph ph-gear text-2xl"></i>
-                  </span>
-                  <span className="text-[15px]=">Setting</span>
-                </Link>
-              </li>
-            </ul>
-          </nav>
+      <div className="px-6 sticky top-0">
+        <div className="py-[30px]">
+          <Image src={logo} alt="Logo" />
         </div>
+        <nav>
+          <ul>
+            {menuItems.map((item, idx) => (
+              <li
+                key={idx}
+                className={`mb-1 ${pathname === item.href ? "btngrdnt" : ""}`}>
+                <Link
+                  href={item.href}
+                  className={`btngrdnt-child w-full py-3 px-3 flex items-center gap-3 rounded-lg ${
+                    pathname === item.href ? "" : "text-nt90"
+                  }`}>
+                  <span className="d-center">
+                    <i className={`ph ${item.icon} text-2xl`}></i>
+                  </span>
+                  <span className="text-[15px]">{item.label}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </>
   );

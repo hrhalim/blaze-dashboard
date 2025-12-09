@@ -21,12 +21,14 @@ export default function SalesNotifications() {
             <div className="flex items-center gap-1 mb-1">
               <Link
                 href="/"
-                className="flex items-center gap-1 text-nt160 text-lg">
+                className="flex items-center gap-1 text-nt160 text-base lg:text-lg">
                 Home
                 <i className="ph ph-caret-right text-lg"></i>
               </Link>
               <div className="flex items-center gap-1">
-                <span className="text-lg text-primary">Notifications</span>
+                <span className="text-base lg:text-lg text-primary">
+                  Notifications
+                </span>
                 <span className="text-nt160">(November 25, 2025)</span>
               </div>
             </div>

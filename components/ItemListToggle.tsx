@@ -25,7 +25,7 @@ const ItemListToggle: React.FC = () => {
       </button>
 
       <div
-        className={`absolute left-full top-12 transform transition-all duration-500 ease-in-out p-4 bg-nt10 rounded-lg ${
+        className={`absolute left-full top-12 transform transition-all duration-500 ease-in-out p-4 bg-nt10 rounded-lg z-50 ${
           visible ? "-translate-x-32 opacity-100" : "translate-x-0 opacity-0"
         }`}>
         <ul className="min-w-[134px] p-4">

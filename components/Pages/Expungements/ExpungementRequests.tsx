@@ -1,4 +1,3 @@
-"use client";
 import NewExungementReq from "@/components/Pages/Home/NewExungementReq";
 
 export default function ExpungementRequests() {

@@ -75,15 +75,23 @@ textarea {
     width: 100%;
     outline-color: transparent;
     font-size: 15px;
-    // border-radius: 10px;
 
+    // border-radius: 10px;
     &::placeholder {
         font-size: 15px;
     }
 }
 
+table {
+    input {
+        width: inherit;
+    }
+}
+
 .d-center {
-    @apply flex items-center justify-center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .max-auto {
@@ -109,10 +117,6 @@ textarea {
 
 //     &.lg::before {
 //         @apply w-0.5 h-[60px] lg:h-[60px] opacity-40;
-//     }
-
-//     &.lgx::before {
-//         @apply h-[173px] w-[1px] bg-[#B3B6B9] opacity-[0.3];
 //     }
 
 //     &.lg2::before {

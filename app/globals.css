@@ -69,7 +69,7 @@
   }
 
   .fs-three {
-    @apply text-[20px] font-normal leading-[120%] sm:font-normal lg:text-[24px] 2xl:text-[32px];
+    @apply text-[20px] font-normal leading-[120%] sm:font-normal lg:text-[26px];
   }
 
   .fs-four {
@@ -225,7 +225,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     padding: 0;
   }

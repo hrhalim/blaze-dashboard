@@ -74,6 +74,26 @@
     }
 }
 
+.newexreqtwo {
+    table {
+        tbody {
+            td {
+                padding: 20px 20px 0px 25px;
+                font-size: 14px;
+            }
+        }
+    }
+
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
 .newordertable {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -125,6 +145,16 @@
     }
 }
 
+.activeinvoices {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
 .experformance {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -133,6 +163,15 @@
         width: 0;
         height: 0;
     }
+}
+.teamlistsscroll{
+        -ms-overflow-style: none;
+            scrollbar-width: none;
+        
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
 }
 
 // Add new product section ends
@@ -158,6 +197,139 @@
 }
 
 // Chart area ends
-// Expungement History section starts
+// Event Expungement section starts
+.revuenuebg {
+    background-image: url('/images/eventmanagementbg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-// Expungement History section Ends here
+// Event Expungement section Ends here
+
+// Switch Toggle Button Starts here
+/* From Uiverse.io by ozgeozkaraa01 */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 24px;
+    border-radius: 17px;
+    background-color: #424040;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.toggle-label:before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.toggle-input:checked+.toggle-label {
+    background-color: #39CB7F;
+}
+
+.toggle-input:checked+.toggle-label:before {
+    transform: translateX(18px);
+}
+
+// Switch Toggle Button Ends here
+.suggtionfillinfo {
+    -ms-overflow-style: 6px;
+    scrollbar-width: 6px;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+}
+
+.gradientsuggtion {
+    &:hover {
+        background: linear-gradient(0deg, #12003D 0%, #7E49FF 100%);
+    }
+
+    cursor: pointer;
+}
+
+// Faq 
+.accordion-item {
+    &.active {
+        position: relative;
+        background: linear-gradient(0deg, #44386E 0%, #000000 100%);  
+        border: transparent;
+        &::before { 
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 10px;
+            padding: 1px;
+            background: linear-gradient(180deg,#12003D,#7E49FF);
+            mask: linear-gradient(#000 0 0) content-box, 
+            linear-gradient(#000 0 0);
+            mask-composite: exclude; 
+        }
+        .accordion-text {
+            color: #FFFFFFCC;
+        }
+        .accordion-title  {
+            color: #FFFFFF;
+        }
+    }
+    
+}
+
+  
+
+// Media flow page 
+.media-typeitem {
+  li {
+    &:nth-child(1) {
+      background-color: #1A9BFC3D;
+      color: #1A9BFC;
+    }
+    &:nth-child(2) {
+      background-color: #FEC90F3D;
+      color: #FEC90F;
+    }
+  }
+}
+
+// Gradiant button two 
+.btngrdnt-2 {
+    background: linear-gradient(0deg, #FF3030 0%, #000000 100%);
+    border-radius: 8px;
+    padding: 1px;
+    border: none;
+    cursor: pointer;
+    background-position: bottom;
+    transition: background-position 0.4s ease;
+
+    .btngrdnt-child-2 {
+        background: linear-gradient(180deg, #FF303066 0%, #230000 100%);
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: background-position 0.4s ease;
+    }
+}
